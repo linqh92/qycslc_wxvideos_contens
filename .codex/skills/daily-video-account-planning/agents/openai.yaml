@@ -1,4 +1,0 @@
-interface:
-  display_name: "视频号日更获客"
-  short_description: "基于本地历史库的企业股权与财税视频号获客流程"
-  default_prompt: "使用 $daily-video-account-planning 扫描本地历史库，并为企业股权与财税视频号提供 5 个不重复的选题方案。"

@@ -8,6 +8,14 @@
 
 内容围绕成熟企业的股权架构、公司治理、股权交易及相关财税合规服务展开，重点服务有股权设计、治理优化、交易安排与合规需求的企业经营者。账号业务定位不因流程调整而改变。
 
+## 三层架构
+
+| 层级 | 职责 | 位置 |
+| --- | --- | --- |
+| Agent | 判断用户任务、路由 Skill、控制阶段与写入边界 | `AGENTS.md`、`.codex/agents/video-account-operator.toml` |
+| Skills | 分别执行灵感录入、选题规划、文案制作、发布归档 | `.codex/skills/` |
+| Knowledge Base | 保存账号专属定位、规则、历史内容、选题、复盘与素材 | `内容库/` |
+
 ## 从哪里开始
 
 根据当前需求选择一个入口：
@@ -27,16 +35,20 @@
 | 选题规划 | 灵感库、候选选题与各业务方向选题池 | `内容库/03-选题规划/` |
 | 内容复盘 | 重复选题检查、内容缺口与定位变化记录 | `内容库/04-内容复盘/` |
 | 内容素材 | 标题、案例、风险场景、政策资料等写作素材 | `内容库/05-内容素材库/` |
-| 流程模块 | 灵感录入、选题、文案、发布归档等可复用流程 | `.codex/skills/daily-video-account-planning/` |
+| 项目 Agent | 判断当前阶段、路由 Skill 与控制资产写入边界 | `.codex/agents/video-account-operator.toml` |
+| 灵感录入 | 独立保存原始文字、图片文字和反馈 | `.codex/skills/idea-intake/` |
+| 选题规划 | 扫描历史库并提供候选选题 | `.codex/skills/topic-planning/` |
+| 文案制作 | 为已确认主题制作合规视频号文案 | `.codex/skills/video-copywriting/` |
+| 发布归档 | 为实际发布且明确要求归档的内容创建历史记录 | `.codex/skills/publish-archive/` |
 
-工作流总入口为 [SKILL.md](.codex/skills/daily-video-account-planning/SKILL.md)，它会根据用户当前动作调用对应模块：
+项目规则与 Skill 路由由 [AGENTS.md](AGENTS.md) 管理；运营 Agent 依据用户当前动作调用对应模块：
 
 | 场景 | 流程说明 |
 | --- | --- |
-| 录入灵感 | [灵感录入流程](.codex/skills/daily-video-account-planning/references/idea-intake-workflow.md) |
-| 获取选题 | [选题流程](.codex/skills/daily-video-account-planning/references/topic-selection-workflow.md) 与 [内容库读取说明](.codex/skills/daily-video-account-planning/references/obsidian-history-vault.md) |
-| 撰写文案 | [文案生成指南](.codex/skills/daily-video-account-planning/references/original-copywriting-guide.md) |
-| 发布归档 | [发布与归档流程](.codex/skills/daily-video-account-planning/references/publish-and-archive-workflow.md) 与 [历史内容归档规范](内容库/00-首页与维护规则/历史内容归档规范.md) |
+| 录入灵感 | [idea-intake](.codex/skills/idea-intake/SKILL.md) |
+| 获取选题 | [topic-planning](.codex/skills/topic-planning/SKILL.md) 与 [历史库读取规则](.codex/skills/topic-planning/references/history-vault-rules.md) |
+| 撰写文案 | [video-copywriting](.codex/skills/video-copywriting/SKILL.md) |
+| 发布归档 | [publish-archive](.codex/skills/publish-archive/SKILL.md) 与 [历史内容归档规范](内容库/00-首页与维护规则/历史内容归档规范.md) |
 
 ## 主流程
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "视频号文案创作"
+  short_description: "为已确认选题创作合规视频号文案"
+  default_prompt: "使用 $video-copywriting 为我已确认的选题生成视频号文案。"

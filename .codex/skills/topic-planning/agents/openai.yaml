@@ -1,0 +1,4 @@
+interface:
+  display_name: "视频号选题规划"
+  short_description: "扫描内容库并给出 5 个不重复选题"
+  default_prompt: "使用 $topic-planning 扫描本地内容库，提供 5 个不重复的选题方案。"
